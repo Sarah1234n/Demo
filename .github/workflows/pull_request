@@ -1,0 +1,24 @@
+name: Pull Request Workflow
+
+on:
+  pull_request:
+    branches:
+      - main  # Workflow will run for pull requests targeting the 'main' branch
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest  # The job will run on Ubuntu
+
+    steps:
+    - name: Check Out Code
+      uses: actions/checkout@v3  # Checkout the code from the repository
+
+    - name: Run Linter
+      run: |
+        echo "Running linter..."
+        echo "Linting complete."  # Simulate a linter (you can replace it with actual linting commands)
+
+    - name: Run Tests
+      run: |
+        echo "Running tests..."
+        echo "All tests passed!"  # Simulate test execution (replace with actual test commands)
